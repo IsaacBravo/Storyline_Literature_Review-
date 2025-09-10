@@ -10,6 +10,7 @@ Below is an embedded preview of the main page. You can view the live HTML by ope
 
 <details>
   <summary>Page Preview (index.html)</summary>
+  <br>
   <div align="center">
     <img src="https://raw.githubusercontent.com/IsaacBravo/Storyline_Literature_Review-/refs/heads/main/images/screenshot-demo-project.jpg" alt="Demo Screenshot" width="900" />
   </div>
