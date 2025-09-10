@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visualizing Climate Change in the Media</title>
+    <meta name="description" content="A scrollytelling exploration of climate visuals in media using D3.">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <script defer src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" role="banner">
+        <h1>Visualizing Climate Change in the Media 🌍</h1>
+        <p class="tagline">What we study, what we miss, and what comes next</p>
+        <button id="themeToggle" aria-pressed="false" aria-label="Toggle dark mode">🌓</button>
+    </header>
+
+    <main id="main">
+
+    <section id="hero" class="plot-card" aria-labelledby="hero-title">
+        <p class="hero-description">Visual communication plays a critical role in shaping public perceptions of climate change. Based on a systematic review of 124 studies published between 2005 and 2024, this storyline highlights the major trends, gaps, and challenges in research on climate change visuals across media, providing context for the abstract that follows.</p>
+        <br>
+        <p> 
+           <strong>Abstract:</strong>
+           Climate change visualizations in the media play a crucial role in conveying information, raising awareness, and motivating action. This combines systematic and scoping literature review (2005 – 2024) with content analysis to analyse current research on climate change visualisations of traditional and digital media. Findings show that most existing research concentrates on traditional media with limited focus on social media and a predominance of studies focused on Western countries. Framing theory emerges as the predominant theoretical framework, especially in qualitative studies. By analysing and comparing a large corpus of scientific studies, we identify predominant topics, methodologies, and gaps, while highlighting key challenges and implications for future research.</p>
+        <br>
+        <p class="hero-description2">
+            <strong>Citation:</strong>
+            (Under Review) Isaac Bravo, Katharina Prasse, Stefanie Walter, Margret Keuper. (2025). Visualizing Climate Change in the
+            Media: A Systematic Literature Review, Challenges, and Future Research. Annals of the International Communication Association.
+            <br>
+        </p>
+    </section>
+
+        <section id="hero" class="step" aria-labelledby="hero-title">
+                    <div style="display: contents">
+                            <div class="hero-visual" aria-hidden="true"></div>
+                            <div class="hero-text">
+                                <h2 id="hero-title">1. Visuals aren’t just decoration ➡️ They drive emotions</h2>
+                                <p class="step-copy">💡Visuals increase emotional engagement and can motivate action.</p>
+                                <p class="step-copy">📌Iconic formats spread widely and anchor public understanding.</p>
+                                <br>
+                                <div class="hero-captions" role="group" aria-label="Emotion captions">
+                                    <p data-emotion="warming" aria-live="polite">Warming Stripes</p>
+                                    <p data-emotion="urgency" aria-live="polite">Wildfires</p>
+                                    <p data-emotion="hope" aria-live="polite">Deforestation</p>
+                                </div>
+                                <div class="hero-caption-texts">
+                                    <p data-emotion="warming" style="display:none;">Source: Hawkins, E. (2018). Warming Stripes [Digital image].</p>
+                                    <p data-emotion="urgency" style="display:none;">Source: Photo by <a href="https://unsplash.com/@mattpalmer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Matt Palmer</a> on <a href="https://unsplash.com/photos/brown-and-green-grass-field-near-body-of-water-under-cloudy-sky-during-daytime-K5KmnZHv1Pg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.</p>
+                                    <p data-emotion="hope" style="display:none;">Source: Photo by <a href="https://unsplash.com/@mattpalmer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Matt Palmer</a> on <a href="https://unsplash.com/photos/brown-and-green-grass-field-near-body-of-water-under-cloudy-sky-during-daytime-K5KmnZHv1Pg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.</p>
+                                </div>
+                            </div>
+                    </div>
+        </section>
+
+        <section id="pubs" class="step" aria-labelledby="pubs-title">
+            <div style="display: contents">
+                <div class="pubs-visual" aria-hidden="true">
+                    <div class="chart" id="pubs-chart" role="img" aria-label="Yearly paper counts with 2020-2024 highlighted"></div>
+                    <div class="annotation" id="pubs-annotations" aria-hidden="true"></div>
+                </div>
+                <div class="pubs-text">
+                    <h2 id="pubs-title">2. The research boom is recent</h2>
+                    <p class="step-copy">💡124 publications published between 2005 to 2024, more than half (n = 63, 51%) have been published over the last five years.</p>
+                    <p class="step-copy">📌Notably, social media studies reached their highest number of publications to date in 2024 (n=20), representing a 42.9% increase from 2023 and underscoring the growing importance of digital platforms in shaping visual discourse on climate change.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="media-types" class="step" aria-labelledby="media-title">
+            <div style="display: contents">
+                <div class="pubs-visual" aria-hidden="true">
+                    <div class="chart" id="stacked-bar" role="img" aria-label="100% stacked bar of media types"></div>
+                    <div class="chart" id="dot-plot" role="img" aria-label="Dot plot of social platform coverage"></div>
+                    <!--<div id="pie-chart" class="chart" role="img" aria-label="Animated pie chart of media types"></div>-->
+                </div>
+                <div class="pubs-text">
+                    <h2 id="pubs-title">3. What we study (and what we don’t)</h2>
+                    <p class="step-copy">💡Research focuses on Traditional Media.</p>
+                    <p class="step-copy">📌Social Media is still less explored.</p>
+                    <p class="step-copy">🚩Within social, most attention goes to Twitter (31.7%) and Instagram (26.7%); TikTok and Reddit lag.</p>
+                    <p class="step-copy">🎯Studies that compare traditional + social are rare (~4.9%)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="methods" class="step" aria-labelledby="methods-title">
+            <div style="display: contents">
+                <div class="pubs-visual" aria-hidden="true">
+                    <div class="chart" id="circle-packing" role="img" aria-label="Circle packing of research approaches"></div>
+                </div>
+                <div class="methods-text">
+                    <h2 id="pubs-title">4. Methods used in the research area</h2>
+                    <p class="step-copy">💡Qualitative research dominates; scale is the exception, but not the rule.</p>
+                    <p class="step-copy">📌Manual content analysis is the single most used technique.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="modalities" class="step" aria-labelledby="modalities-title">
+            <div style="display: contents">
+                <div class="pubs-visual" aria-hidden="true">
+                    <div class="chart" id="treemap" role="img" aria-label="Treemap of modalities"></div>
+                </div>
+                <div class="methods-text">
+                    <h2 id="modalities-title">5. What we "see" in our data</h2>
+                    <p class="step-copy">💡Images are the main unit (59.7%) vs videos (11.0%).</p>
+                    <p class="step-copy">📌Nearly 48% of studies are multimodal, and images+text is the dominant combo (41.1%).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="countries" class="step" aria-labelledby="countries-title">
+            <div style="display: contents">
+                <div class="pubs-visual" aria-hidden="true">
+                    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+                    <div class="chart" id="country-bars" role="img" aria-label="Bubble cartogram of countries studied"></div>
+                    <div class="chart" id="world-map" role="img" aria-label="Bubble cartogram of countries studied"></div>
+                </div>
+                <div class="methods-text">
+                    <h2 id="countries-title">6. Who gets represented</h2>
+                    <p class="step-copy">💡Most studied countries: US (17.4%), UK (13.8%), Germany (9.6%)—a clear Global-North skew across 48 countries total.</p>
+                    <p class="step-copy">📌Author affiliations also cluster in the US/UK/DE.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="challenges" class="step fancy" aria-labelledby="challenges-title">
+            <div style="display: contents">
+                <h2 id="challenges-title">7. Challenges &amp; Next Steps</h2>
+
+                <!-- Split-screen comparison (unchanged) 
+                <div class="split-panel" id="split-panel" role="group" aria-label="Split-screen comparison panel"></div> -->
+
+                <!-- Challenge “badges” restyled as cards -->
+                <ul class="challenge-cards" aria-label="Challenge badges">
+                    <li class="challenge-card accent-green">
+                    <span class="emoji" aria-hidden="true">🔒</span>
+                    <div>
+                        <h4>Data access, APIs & platform bias</h4>
+                        <p>Limited APIs (esp. X/Twitter) constrain scale and comparability; datasets skew toward platforms that are easiest to scrape.</p>
+                    </div>
+                    </li>
+
+                    <li class="challenge-card accent-amber">
+                    <span class="emoji" aria-hidden="true">🧩</span>
+                    <div>
+                        <h4>Method fragmentation</h4>
+                        <p>Rich but narrow qualitative traditions vs. under-utilized computational pipelines; risk of model bias (English-centric vision/language models).</p>
+                    </div>
+                    </li>
+
+                    <li class="challenge-card accent-red">
+                    <span class="emoji" aria-hidden="true">❗</span>
+                    <div>
+                        <h4>Misinformation & solution-sabotage</h4>
+                        <p>2025 reporting highlights systematic misinformation efforts now targeting solutions (renewables, policy) as much as the science.</p>
+                    </div>
+                    </li>
+
+                    <li class="challenge-card accent-blue">
+                    <span class="emoji" aria-hidden="true">🌍</span>
+                    <div>
+                        <h4>Global bias</h4>
+                        <p>Under-studied geographies and stakeholders. Need more Global South/Indigenous contexts, and more participatory visuals.</p>
+                    </div>
+                    </li>
+                </ul>
+                    </div>
+        </section>
+    </main>
+
+    <footer class="site-footer plot-card" role="contentinfo">
+        <p>© 2025 <strong>ClimateVisual Project</strong></p>
+        <p><em>Based on:</em> Isaac Bravo, Katharina Prasse, Stefanie Walter, Margret Keuper. (2025). Visualizing Climate Change in the
+Media: A Systematic Literature Review, Challenges, and Future Research. Annals of the International Communication Association <br>
+        <p><strong>Citation:</strong> Please cite the manuscript when using or sharing content from this site.</p>
+        <p><strong>Contact:</strong> <a href="mailto:isaac.bravo@tum.de">isaac.bravo@tum.de</a></p>
+    </footer>
+</body>
+</html>
+
+
