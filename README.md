@@ -11,7 +11,7 @@ Below is an embedded preview of the main page. You can view the live HTML by ope
 <details>
   <summary>Page Preview (index.html)</summary>
   <div align="center">
-    <img src="https://raw.githubusercontent.com/IsaacBravo/Storyline_Literature_Review-/main/demo-screenshot.png" alt="Demo Screenshot" width="900" />
+    <img src="https://raw.githubusercontent.com/IsaacBravo/Storyline_Literature_Review-/main/screenshot-demo-project.png" alt="Demo Screenshot" width="900" />
   </div>
 </details>
 
